@@ -5,11 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "server": "node src/server.mjs",
+    "client": "node src/client.mjs",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/b4a": "^1.6.4",
     "typescript": "^5.5.3",
     "vite": "^5.4.1"
+  },
+  "dependencies": {
+    "@hyperswarm/dht": "^6.5.1",
+    "b4a": "^1.6.6"
   }
 }

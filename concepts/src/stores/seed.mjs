@@ -17,11 +17,13 @@ swarm.on('connection', (socket) => store.replicate(socket));
 
 const seedCore = store.get({name: 'seeding-core'});
 
-seedCore.ready().then((instance) => {
+seedCore.ready().then(async (instance) => {
   swarm.join(seedCore.discoveryKey)
-  while (seedCore.length < 10000) {
+  let length = 0;
+  while (length < 10000) {
     const data = b4a.from(`next block #${seedCore.length}`,'hex')
-    seedCore.append(data)
+   const instance = await seedCore.append(data)
+    length = instance.length;
   }
   const publicKey = b4a.toString(seedCore.key, 'hex');
   console.log('Seed core public key:', publicKey);

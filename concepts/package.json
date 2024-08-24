@@ -8,6 +8,8 @@
     "server": "node src/networks/server.mjs",
     "client": "node src/networks/client.mjs",
     "swarm": "node src/networks/swarm.mjs",
+    "seed": "node src/stores/seed.mjs",
+    "peer": "node src/stores/peer.mjs",
     "core": "node src/stores/core.mjs",
     "build": "tsc && vite build",
     "preview": "vite preview"

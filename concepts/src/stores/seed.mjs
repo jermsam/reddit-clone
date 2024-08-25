@@ -20,7 +20,7 @@ const seedCore = store.get({name: 'seeding-core'});
 seedCore.ready().then(async (instance) => {
   swarm.join(seedCore.discoveryKey)
   let length = 0;
-  while (length < 10000) {
+  while (length < 1453) {
     const data = b4a.from(`next block #${seedCore.length}`,'hex')
    const instance = await seedCore.append(data)
     length = instance.length;

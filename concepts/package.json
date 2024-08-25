@@ -9,6 +9,7 @@
     "client": "node src/networks/client.mjs",
     "swarm": "node src/networks/swarm.mjs",
     "seed": "node src/stores/seed.mjs",
+    "autobase-example": "node src/autobee-example/index.mjs",
     "peer": "node src/stores/peer.mjs",
     "core": "node src/stores/core.mjs",
     "build": "tsc && vite build",
@@ -21,11 +22,15 @@
   },
   "dependencies": {
     "@hyperswarm/dht": "^6.5.1",
+    "autobase": "^6.5.3",
     "b4a": "^1.6.6",
     "bson": "^6.8.0",
     "corestore": "^6.18.4",
     "crypto": "^1.0.1",
+    "hyperbee": "^2.20.0",
     "hyperswarm": "^4.8.2",
+    "lexicographic-integer": "^1.1.0",
+    "minimist": "^1.2.8",
     "random-access-memory": "^6.2.1"
   }
 }
